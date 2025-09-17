@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: linear-gradient(135deg, #000, #333);
+    background-attachment: fixed;
+    color: white; 
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar styles */
+.navbar ul {
+    margin-bottom: 0px;
+    list-style-type: none;
+    background-color: rgba(37, 37, 37, 0.99);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center; 
+    transition: background-color 0.3s;
+    transition: text-shadow 0.3s;
+    transition: font-size 0.3s;
+}
+
+.navbar a:hover {
+    font-size: 20px;
+    background-color: rgb(44, 43, 43);
+    text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
+}
+
+.navbar li {
+    float: left;
+}
+
+/* Typewriter effect */
+.typewriter {
+    font-size: 45px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin-left: 0 auto; /* Centers the text */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+    text-align: left;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+}
+
+.home-image {
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    margin-left: 180px; 
+    margin-right: 0px;
+}
+
+/* === STYLE BARU UNTUK GAMBAR PROFIL === */
+.home-image img {
+    width: 300px;      /* Atur lebar gambar */
+    height: 300px;     /* Atur tinggi gambar */
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    object-fit: cover; /* Memastikan gambar tidak gepeng */
+    border: 3px solid white; /* Opsional: menambahkan bingkai putih */
+}
+/* === AKHIR DARI STYLE BARU === */
+
+
+.home-text {
+    margin-left: 50px;
+    text-shadow: 1px 1px 5px #fff, 1px 1px 10px #ccc;
+}
+
+.home-description {
+    font-size: 20px;
+}
+
+.headerss {
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-top: 0; 
+    margin-bottom: 10px; 
+}
+
+.profile {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px; 
+}
+
+.educational-background {
+    margin-left:50px;
+    margin-right:50px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size:20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 250px;
+    text-align: center; 
+}
+
+.entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entry img {
+    max-width: 150px;
+    height: auto;
+}
+
+
+.entry p {
+    margin: 5px 0;
+}
+
+.food-text {
+    margin-left:50px;
+    margin-right:50px;  
+}
+
+.food-text img {
+    max-height: 350px;
+    max-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 60px;
+    transition: transform 0.3s ease-in-out
+}
+
+.food-text img:hover{
+    transform: scale(1.05);
+}
+
+.food-text p {
+    text-align: justify;
+}
+
+.hometown {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+}
+
+.hometown img{
+    max-width: 50%;
+    max-height: 450px;
+    margin-right: 35px;
+}
+
+.hometown p{
+    font-size: 17px;
+}
+
+.container {
+    position: relative;
+}
+
+.container .wrapper {
+    width: 800px;
+    height: 500px;
+    box-shadow: 0px 0px 20px 5px #f1f1f199;
+    margin: 80px auto;
+    overflow: hidden;   
+}
+
+.container .wrapper-holder {
+    display: grid;
+    grid-template-columns: repeat(4, 100%);
+    height: 100%;
+    width: 100%; 
+    animation: slider 20s ease-in-out infinite alternate;
+}
+
+.container #slider-img-1 {
+    background-image:url(images/monas.jpg);
+    background-position: center;
+}
+
+.container #slider-img-2 {
+    background-image:url(images/kota-tua.jpg);
+    background-position: center;
+}
+
+.container #slider-img-3 {
+    background-image: url(images/ancol.jpg);
+    background-position: center;
+}
+
+.container #slider-img-4 {
+    background-image: url(images/istiqlal.jpg);
+    background-position: center;
+}
+
+.container .button-container .button {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.container .button-container .button:hover {
+    background-color:#ccc;
+}
+
+.container .button-container {
+    position: absolute;
+    left: 45%;
+    bottom: 0%;
+}
+
+.tourist-text {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+}
+
+@keyframes slider {
+    0% {transform: translateX(0%);}
+    10% {transform: translateX(0%);}
+
+    20% {transform: translateX(-100%);}
+    30% {transform: translateX(-100%);}
+
+    40% {transform: translateX(-200%);}
+    50% {transform: translateX(-200%);}
+
+    60% {transform: translateX(-300%);}
+    70% {transform: translateX(-300%);}
+    
+    80% {transform: translateX(-200%);}
+    90% {transform: translateX(-100%);}
+
+    100% {transform: translateX(0%);}
+}

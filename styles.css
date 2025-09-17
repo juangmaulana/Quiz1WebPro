@@ -46,11 +46,11 @@ html, body {
 /* Typewriter effect */
 .typewriter {
     font-size: 45px;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid white; /* The typewriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin-left: 0 auto; /* Centers the text */
-    letter-spacing: .15em; /* Adjust as needed */
+    overflow: hidden; 
+    border-right: .15em solid white; 
+    white-space: nowrap; 
+    margin-left: 0 auto; 
+    letter-spacing: .15em; 
     animation: 
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
@@ -70,8 +70,7 @@ html, body {
 .home {
     display: flex;
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 5px;
+    padding: 0 2rem;
 }
 
 .home-image {
@@ -82,20 +81,19 @@ html, body {
     margin-right: 0px;
 }
 
-/* === STYLE BARU UNTUK GAMBAR PROFIL === */
 .home-image img {
-    width: 300px;      /* Atur lebar gambar */
-    height: 300px;     /* Atur tinggi gambar */
-    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
-    object-fit: cover; /* Memastikan gambar tidak gepeng */
-    border: 3px solid white; /* Opsional: menambahkan bingkai putih */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
 }
-/* === AKHIR DARI STYLE BARU === */
-
 
 .home-text {
     margin-left: 50px;
     text-shadow: 1px 1px 5px #fff, 1px 1px 10px #ccc;
+    flex: 1;
+    min-width: 0;
 }
 
 .home-description {
@@ -209,25 +207,31 @@ html, body {
     animation: slider 20s ease-in-out infinite alternate;
 }
 
+/* === BAGIAN GAMBAR SLIDESHOW YANG DIPERBARUI === */
 .container #slider-img-1 {
     background-image:url(images/monas.jpg);
     background-position: center;
+    background-size: cover; /* Ditambahkan */
 }
 
 .container #slider-img-2 {
     background-image:url(images/kota-tua.jpg);
     background-position: center;
+    background-size: cover; /* Ditambahkan */
 }
 
 .container #slider-img-3 {
     background-image: url(images/ancol.jpg);
     background-position: center;
+    background-size: cover; /* Ditambahkan */
 }
 
 .container #slider-img-4 {
     background-image: url(images/istiqlal.jpg);
     background-position: center;
+    background-size: cover; /* Ditambahkan */
 }
+/* === AKHIR DARI BAGIAN YANG DIPERBARUI === */
 
 .container .button-container .button {
     background-color: white;
@@ -258,18 +262,43 @@ html, body {
 @keyframes slider {
     0% {transform: translateX(0%);}
     10% {transform: translateX(0%);}
-
     20% {transform: translateX(-100%);}
     30% {transform: translateX(-100%);}
-
     40% {transform: translateX(-200%);}
     50% {transform: translateX(-200%);}
-
     60% {transform: translateX(-300%);}
     70% {transform: translateX(-300%);}
-    
     80% {transform: translateX(-200%);}
     90% {transform: translateX(-100%);}
-
     100% {transform: translateX(0%);}
+}
+
+@media (max-width: 1250px) {
+    .typewriter {
+        font-size: 35px;
+    }
+    .home-image {
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 992px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .home-image {
+        margin: 0 auto 30px;
+    }
+    .typewriter {
+        font-size: 32px;
+        text-align: center;
+        white-space: normal;
+        border-right: none;
+        animation: none;
+    }
+    .home-text {
+        margin-left: 0;
+    }
 }

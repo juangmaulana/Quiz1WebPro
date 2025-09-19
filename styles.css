@@ -43,7 +43,6 @@ html, body {
     float: left;
 }
 
-/* Typewriter effect */
 .typewriter {
     font-size: 45px;
     overflow: hidden; 
@@ -52,7 +51,7 @@ html, body {
     margin-left: 0 auto; 
     letter-spacing: .15em; 
     animation: 
-    typing 3.5s steps(40, end),
+    typing 3.5s steps(24, end),
     blink-caret .75s step-end infinite;
     text-align: left;
 }
@@ -301,4 +300,14 @@ html, body {
     .home-text {
         margin-left: 0;
     }
+}
+
+.navbar a.active{
+    font-size: 20px;
+    background-color: rgb(44, 43, 43);
+    text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
+}
+
+.container .button-container .button.active {
+    background-color: #999;
 }
